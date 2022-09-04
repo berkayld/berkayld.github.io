@@ -73,6 +73,9 @@ function kartTiklama(olay) {
         acikKart.classList.add("eslesti");
         secilenKart.classList.add("eslesti");
 
+        const eslesmeSayisi = document.querySelectorAll(".eslesti").length /2;
+        document.getElementById("puan").innerHTML ="Eşleşen kart sayısı:" + eslesmeSayisi ;
+
         acikKart.classList.remove("acik");
         secilenKart.classList.remove("acik");
 
