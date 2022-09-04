@@ -75,6 +75,19 @@ function kartTiklama(olay) {
 
         const eslesmeSayisi = document.querySelectorAll(".eslesti").length /2;
         document.getElementById("puan").innerHTML ="Eşleşen kart sayısı:" + eslesmeSayisi ;
+        
+        setTimeout(() => {
+            if (eslesmeSayisi === 4) {
+                const gif = document.createElement("img");
+                gif.src ="C:\\Users\\Berkay\\OneDrive\\Masaüstü\\odev\\odev14-eslestirme\\star.gif";
+                document.getElementById("oyun-bitti").append(gif);
+                setTimeout(() => {
+                    gif.remove();
+                }, 5000);
+            }
+        }, 1000);
+
+
 
         acikKart.classList.remove("acik");
         secilenKart.classList.remove("acik");
