@@ -10,10 +10,22 @@ const kartTemplate = `
     </div>
 `;
 
-const fotoNumaralari = [
-    10, 20, 30, 20,
-    10, 40, 40, 30
-];
+
+
+const randomSayiUret = () => {
+   return {length: 99}, Math.floor(Math.random() *  99) 
+}
+
+
+
+const fotoNumaralari = [];
+
+for (let i = 0; i < 4; i++) {
+    const randomSayi = randomSayiUret();
+    fotoNumaralari.push(randomSayi);
+    fotoNumaralari.push(randomSayi);
+}
+
 
 for (fotoNumara of fotoNumaralari) {
     const yenikart = document.createElement("div");
